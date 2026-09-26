@@ -3,8 +3,10 @@ import { VERCEL, PORT } from './lib/env'
 import { getTodaysResults } from './lib/cache'
 import { filterAndSort, listBrands, listFlavors } from './lib/filterAndSort'
 import { type AllData } from './types'
+import cors from 'cors'
 
 const app = express()
+app.use(cors())
 
 // today's data. when it isn't ready yet, responds 202 and returns null, and the client should retry in a minute
 async function getResults(res: express.Response): Promise<AllData | null> {
