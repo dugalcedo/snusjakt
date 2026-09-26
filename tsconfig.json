@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "strict": true,
+        "esModuleInterop": true,
+        "downlevelIteration": true,
+        // don't type check dependencies' .d.ts files (puppeteer's need a newer target, @vercel/functions' import untyped `ws`)
+        "skipLibCheck": true
+    }
+}

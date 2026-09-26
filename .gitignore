@@ -1,0 +1,4 @@
+.env
+bun.lock
+node_modules
+DOC.md
